@@ -14,6 +14,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ========== DESIGN TOKENS ========== */
 :root {
   /* Fonts */
@@ -938,10 +946,16 @@ button {
   font-size: clamp(16px, 1.1vw, 20px); /* Fluid 16-20px */
   color: var(--color-text-secondary);
   margin: 30px 0px 40px 0;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
-  max-width: 700px;
+  max-width: 720px;
   line-height: clamp(24px, 1.56vw, 30px); /* Fluid line-height */
+}
+
+@media (max-width: 1536px) {
+  .sub-text {
+    max-width: 650px;
+  }
 }
 
 .hospitality-hero .btn-wrapper {
@@ -987,6 +1001,13 @@ button {
     gap: 60px;
   }
 
+  .hospitality-hero .hero-image-wrapper {
+  height: auto;
+  width: auto;
+  /* width: 100%; */
+  /* max-width: 715px; */
+}
+
   .hero-content {
     text-align: center;
   }
@@ -1001,6 +1022,12 @@ button {
   .hospitality-hero .btn-wrapper {
     justify-content: center;
   }
+
+  .page-name-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* ========================================= */
@@ -1009,7 +1036,7 @@ button {
 
 .slider {
   margin: 0px auto;
-  padding: 30px 0;
+  padding: 40px 0;
   position: relative;
   /* background-image:
     linear-gradient(to right, #f2f4f7 1px, transparent 1px),
@@ -1232,7 +1259,7 @@ button {
 .section-description {
   max-width: 650px;
   font-size: clamp(14px, 1.1vw, 18px);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--color-text-tertiary);
   line-height: 1.6;
 }
@@ -1264,6 +1291,7 @@ button {
   }
   .info-image {
     justify-content: end;
+    height: 400px;
   }
   /* .feature-info-section {
     padding: 20px 0;
@@ -1306,7 +1334,7 @@ button {
 /* ========== OUTREACH SECTION ========== */
 
 .outreach-section {
-  background: linear-gradient(to bottom, #1a234c, #326a95);
+  background: linear-gradient(to bottom, #1a234c, #00b3ff);
   color: #fff;
 }
 
@@ -1349,13 +1377,18 @@ button {
   .outreach-section .info-image {
     padding-right: 0;
   }
+  .outreach-section {
+    padding-top: 4rem;
+  }
   .info-image {
     padding-right: 0;
     justify-content: center;
     width: 100%;
+    height: auto;
     max-width: 100%;
   }
   .info-image img {
+    height: auto;
     width: 100%;
     max-width: 100%;
   }
@@ -1392,14 +1425,16 @@ button {
 }
 
 .hiring-title {
-  /* font-size: clamp(32px, 3vw, 48px); */
+  font-size: clamp(32px, 2.5vw, 48px);
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .hiring-section .text-T1 {
-  max-width: 736px;
+  max-width: 620px;
+  font-weight: 300;
   margin: 0 auto;
   color: #141219;
 }
@@ -1455,9 +1490,15 @@ button {
 
 .hiring-card-content .text-T1 {
   color: #181d27;
-  font-weight: 400;
+  font-weight: 300;
   max-width: 320px;
   margin-left: 0;
+}
+
+@media (max-width: 1536px) {
+  .hiring-card .text-T1 {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1469,6 +1510,7 @@ button {
 @media (max-width: 640px) {
   .hiring-grid {
     grid-template-columns: 1fr;
+    padding: 0px;
   }
 
   .hiring-card {
@@ -1738,6 +1780,7 @@ button {
   .mega-menu-item {
     gap: 8px;
   }
+  
 }
 
 .dropdown-menu.mega-menu .mega-menu-item:hover {

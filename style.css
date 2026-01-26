@@ -325,7 +325,7 @@ p {
 }
 .text-T1 {
   font-family: var(--font-inter);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 20px;
   line-height: 30px;
 }

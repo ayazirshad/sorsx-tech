@@ -898,7 +898,7 @@ button {
 /* ========== HERO SECTION (REDESIGNED) ========== */
 
 .hospitality-hero {
-  margin-top: clamp(80px, 5vw, 100px);
+  margin-top: clamp(30px, 5vw, 100px);
   background-color: #fff;
 }
 
@@ -1002,11 +1002,11 @@ button {
   }
 
   .hospitality-hero .hero-image-wrapper {
-  height: auto;
-  width: auto;
-  /* width: 100%; */
-  /* max-width: 715px; */
-}
+    height: auto;
+    width: auto;
+    /* width: 100%; */
+    /* max-width: 715px; */
+  }
 
   .hero-content {
     text-align: center;
@@ -1089,6 +1089,12 @@ button {
   }
 }
 
+@media (max-width: 1536px) {
+  .slide-track {
+    gap: 55px;
+  }
+}
+
 /* DESKTOP STYLES (>= 768px) */
 @media (min-width: 768px) {
   .slide-track {
@@ -1109,7 +1115,7 @@ button {
 @media (max-width: 767px) {
   .slide-track {
     animation: scroll 20s linear infinite;
-    gap: 70px; /* Ensure gap is consistent */
+    gap: 45px; /* Ensure gap is consistent */
   }
 
   /* Ensure all slides are visible on mobile for the loop */
@@ -1117,13 +1123,13 @@ button {
     display: flex;
   }
 
-  .slider::before,
+  /* .slider::before,
   .slider::after {
     display: block;
-  }
+  } */
 }
 
-.slider::before,
+/* .slider::before,
 .slider::after {
   background: linear-gradient(
     to right,
@@ -1146,7 +1152,7 @@ button {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
-}
+} */
 
 .btn-wrapper {
   display: flex;
@@ -1334,7 +1340,7 @@ button {
 /* ========== OUTREACH SECTION ========== */
 
 .outreach-section {
-  background: linear-gradient(to bottom, #1a234c, #326A95);
+  background: linear-gradient(to bottom, #1a234c, #326a95);
   color: #fff;
 }
 
@@ -1780,7 +1786,6 @@ button {
   .mega-menu-item {
     gap: 8px;
   }
-  
 }
 
 .dropdown-menu.mega-menu .mega-menu-item:hover {
